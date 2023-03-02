@@ -15,6 +15,7 @@ variable "database_name" {
   description = "The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created. Changing this forces a new resource to be created."
   type        = string
 }
+
 variable "shard_key" {
   description = "The name of the key to partition on for sharding. There must not be any other unique index keys. Changing this forces a new resource to be created."
   type        = string
@@ -35,7 +36,7 @@ variable "default_ttl_seconds" {
 variable "keys" {
   description = "Specifies the list of user settable keys for each Cosmos DB Mongo Collection."
   type        = list(string)
-  default     = [_ids]
+  default     = ["_ids"]
 }
 
 variable "unique" {
