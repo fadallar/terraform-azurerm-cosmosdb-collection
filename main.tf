@@ -11,7 +11,8 @@ resource "azurerm_cosmosdb_mongo_collection" "this" {
   analytical_storage_ttl = var.analytical_storage_ttl
 
   index {
-    index = var.index
+    keys = var.keys
+    unique = var.unique
   }
 
   autoscale_settings {
