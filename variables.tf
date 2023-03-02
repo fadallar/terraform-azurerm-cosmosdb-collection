@@ -36,7 +36,7 @@ variable "default_ttl_seconds" {
 variable "keys" {
   description = "Specifies the list of user settable keys for each Cosmos DB Mongo Collection."
   type        = list(string)
-  default     = ["_ids"]
+  default     = ["_id"]
 }
 
 variable "unique" {
